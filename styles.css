@@ -278,6 +278,12 @@ footer {
     #gallery {
         grid-template-columns: 1fr;
     }
+    .skill-item {
+        color: #007b38;
+        padding: 10px 22px;
+        border-radius: 50px;
+        font-size: 1 rem;
+    }
 
     .about-container {
         flex-direction: column;
