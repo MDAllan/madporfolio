@@ -55,6 +55,15 @@ nav ul li a {
     font-size: 18px;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #007b38;
+    color: white;
+}
+
+
 @media (max-width: 768px) {
     .container {
         padding: 15px;
