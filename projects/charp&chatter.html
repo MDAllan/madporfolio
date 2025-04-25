@@ -1,26 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mad Design Agency</title>
-    <link rel="stylesheet" href="projstyles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
-
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mad Design Agency | Chirp & Chatter</title>
+  <link rel="stylesheet" href="projstyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="../assets/logo.png" alt="Mad Design Agency Logo"> </a>
-            </div>
-           <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../#projects">Projects</a></li>
-                <li><a href="../#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="../index.html"><img src="../assets/logo.png" alt="Mad Design Agency Logo"></a>
+      </div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-header">
+      <div class="container">
+        <h1>Chirp & Chatter</h1>
+        <p>Chirp & Chatter was born out of a passion to provide a haven for parrots who were once pets but became ownerless. The jungle-like immersion of Chirp & Chatter allows potential adopters and bird-lovers to meet parrots in a habitat designed for them. Bonding over shared interests, community can be built over a cup of coffee while patrons interact with the parrots and learn more about them and their stories.</p>
+      </div>
+    </section>
+
+    <section class="project-details container">
+      <h2>Project Overview</h2>
+      <p>This project involved creating a brand identity and responsive web presence for Chirp & Chatter. The identity needed to balance the playful, natural environment with the emotional impact of giving rescued parrots a second chance at life. The result was a design that fosters connection, warmth, and purpose.</p>
+
+      <h2>My Responsibilities</h2>
+      <ul>
+        <li>Designed the Chirp & Chatter logo, drawing inspiration from nature, jungle environments, and parrot silhouettes to evoke warmth and friendliness.</li>
+        <li>Created a full brand guideline document including logo usage, sizing rules, color palette, and typography.</li>
+        <li>Developed a responsive homepage prototype with a welcoming layout and interactive elements showcasing parrots, café ambiance, and adoption info.</li>
+        <li>Illustrated icons and created content sections for community events, parrot bios, and interactive storytelling spaces within the café concept.</li>
+      </ul>
+   
+    </section>
+
+    <section class="image-slider">
+      <h2>Visual Identity</h2>
+      <div class="slider-container">
+        <div class="slide"><img src="../assets/chirpandchatterlogo.png" alt="Chirp & Chatter Logo"></div>
+        <div class="slide"><img src="../assets/chirp and chttermockup.png" alt="Chirp & Chatter Moodboard"></div>
+        <div class="slide"><img src="../assets/chirpandchatterlogovariations.png" alt="Chirp & Chatter Moodboard"></div>
+        
+    </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section class="project-details container">
+        <h2>Research & Design Approach</h2>
+        <p>I started with visual research into parrot sanctuaries, natural jungles, and inclusive community cafés. I aimed to translate the feeling of wonder and companionship into the branding. I explored earthy and tropical tones, rounded fonts, and hand-drawn elements that represent approachability and authenticity.</p>
+      </section>
+  
+      <section class="project-details container">
+        <h2>Final Deliverables</h2>
+        <ul>
+          <li>Logo and branding files in web and print-ready formats.</li>
+          <li>Comprehensive brand guideline PDF for consistent application.</li>
+          <li>Homepage mockup highlighting the parrot experience, café vibe, and adoption messaging.</li>
+          <li>Supporting illustrations and assets for café menus, signage, and merchandise.</li>
+        </ul>
+      </section>
+    </main>
+  
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(n) {
+      slides.forEach((slide) => {
+        slide.style.display = "none";
+        slide.style.opacity = "0";
+      });
+      slides[n].style.display = "block";
+      setTimeout(() => (slides[n].style.opacity = "1"), 100);
+    }
+
+    function moveSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") moveSlide(-1);
+      if (e.key === "ArrowRight") moveSlide(1);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSlide(slideIndex);
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Mad Design Agency. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

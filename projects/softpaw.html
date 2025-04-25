@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Design Agency | SoftPaw Cleaning Company</title>
+    <link rel="stylesheet" href="projstyles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem 0;
+            margin-top: 15px;
+        }
+        .project-header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        .project-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="../index.html"><img src="../assets/logo.png" alt="Mad Design Agency Logo"></a>
+        </div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../#projects">Projects</a></li>
+            <li><a href="../#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>SoftPaw Cleaning Company</h1>
+            <p>SoftPaw is a modern cleaning service platform designed to streamline how clients book home or commercial cleaning services. From a simple and elegant user dashboard to a powerful admin panel, SoftPaw focuses on user experience, seamless booking, and efficient backend management.</p>
+        </div>
+    </section>
+
+    <section class="project-details container">
+        <h2>Project Overview</h2>
+        <p><a class="website" href="#">SoftPaw Cleaning</a> is a full-stack web application built as part of a capstone project. The goal was to design a complete booking platform where users can schedule cleanings, and administrators can manage services, bookings, and providers from a centralized dashboard.</p>
+
+        <h2>My Responsibilities</h2>
+        <ul>
+            <li>Developed the full front-end using HTML, CSS, and JavaScript with a focus on responsive layout and user-friendly design.</li>
+            <li>Built a functional back-end using PHP and MySQL to handle service listings, user registrations, bookings, and reviews.</li>
+            <li>Created a secure authentication system with hashed passwords using PHP's `password_hash()` and `password_verify()` functions.</li>
+            <li>Designed and implemented dynamic dashboards for both users and administrators, featuring filters, live booking updates, and service management tools.</li>
+            <li>Handled the entire database schema, covering users, service providers, bookings, reviews, and services.</li>
+            <li>Used JavaScript for client-side form validation, dashboard interactions, and conditional logic for booking options.</li>
+        </ul>
+    </section>
+    <section class="image-slider">
+        <h2>Visual identity</h2>
+        <div class="slider-container">
+
+            <div class="slide"><img src="../assets/softpawhomepage.png" alt="FitSphere Moodboard"></div>
+            <div class="slide"><img src="../assets/Screenshot 2025-04-24 155511.png" alt="FitSphere Logo Variation"></div>
+            <div class="slide"><img src="../assets/Screenshot 2025-04-24 155202.png" alt="Color Palette"></div>
+            <div class="slide"><img src="../assets/bookingpage.png" alt="Wireframes"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+
+
+    <section class="project-details container">
+        <h2>Key Features</h2>
+        <ul>
+            <li>User-friendly booking form with smart conditional logic.</li>
+            <li>Service provider dashboard for adding, editing, and deleting services with image support.</li>
+            <li>Admin panel with booking and user filtering, provider approvals, and user management tools.</li>
+            <li>Integrated review system linked to service and provider performance.</li>
+            <li>Responsive layout for mobile and desktop users.</li>
+        </ul>
+    </section>
+
+    <section class="project-details container">
+        <h2>Security & Performance</h2>
+        <p>Security was a top priority throughout the project. All user passwords are encrypted using PHP's built-in password hashing methods, and user input is sanitized to prevent SQL injection and XSS attacks. Booking and service data is loaded using efficient SQL queries to maintain speed and reliability across all devices.</p>
+    </section>
+
+    <section class="project-details container">
+        <h2>Final Deliverables</h2>
+        <ul>
+            <li>Responsive front-end website with clean design and interactive UI elements.</li>
+            <li>Admin and provider dashboards with dynamic features for service management and user control.</li>
+            <li>Complete database with all necessary relational tables (users, providers, bookings, reviews, services).</li>
+            <li>Secure user login/register functionality with password encryption.</li>
+            <li>JavaScript enhancements for interactivity and real-time form updates.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mad Design Agency. All Rights Reserved.</p>
+</footer>
+<script>
+    let slideIndex = 0;
+ const slides = document.querySelectorAll(".slide");
+ 
+ function showSlide(n) {
+     slides.forEach((slide, i) => {
+         slide.style.display = "none";
+         slide.style.opacity = "0";
+     });
+     slides[n].style.display = "block";
+     setTimeout(() => (slides[n].style.opacity = "1"), 100);
+ }
+ 
+ function moveSlide(n) {
+     slideIndex = (slideIndex + n + slides.length) % slides.length;
+     showSlide(slideIndex);
+ }
+ 
+ // Enable Arrow Key Navigation
+ document.addEventListener("keydown", (e) => {
+     if (e.key === "ArrowLeft") moveSlide(-1);
+     if (e.key === "ArrowRight") moveSlide(1);
+ });
+ 
+ // Initialize
+ document.addEventListener("DOMContentLoaded", () => {
+     showSlide(slideIndex);
+ });
+     </script>
+        
+     </footer>
+ </body>
+ </html>
+ 

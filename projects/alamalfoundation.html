@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mad Design Agency | Al Aml Foundation</title>
+  <link rel="stylesheet" href="projstyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 2rem 0;
+      margin-top: 15px;
+    }
+    .project-header {
+      text-align: center;
+      padding: 3rem 0;
+    }
+    .project-details {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="../index.html"><img src="../assets/logo.png" alt="Mad Design Agency Logo"></a>
+    </div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../#projects">Projects</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <section class="project-header">
+        <div class="container">
+          <h1>Al-Amal Foundation</h1>
+          <p>The Al-Amal Foundation, established in November 2022, is a non-profit organization dedicated to fostering unity, empowerment, and spiritual growth among Muslim women. Created in loving memory of Amal El-Bekai — whose name means “hope” in Arabic — the foundation embodies her legacy by nurturing a strong sense of sisterhood rooted in compassion, faith, and education. Through community events, open discussions, and accessible resources, Al-Amal inspires women to grow personally and collectively, while deepening their love for Islam.</p>
+        </div>
+      </section>
+      
+
+  <section class="project-details container">
+    <h2>Project Overview</h2>
+    <p><a class="website" href="#">Al Aml Foundation</a> was developed as a brand identity and website project. The focus was on creating a professional and trustworthy image that appeals to both donors and beneficiaries, while keeping the site accessible and informative.</p>
+</section>
+
+    <section class="project-details container">
+        <h2>My Responsibilities</h2>
+        <ul>
+          <li>Designed a new logo that visually represents the mission and values of the Al-Amal Foundation — focusing on unity, hope, and empowerment.</li>
+          <li>Developed a complete brand guideline that includes logo variations, safe zones, clear space rules, color codes, and usage ratios to ensure consistent brand application.</li>
+          <li>Built a fully responsive website that adjusts smoothly across desktops, tablets, and mobile devices, offering a seamless user experience for all visitors.</li>
+          <li>Created a structured homepage and subpages to highlight the foundation’s mission, upcoming events, donation options, and community resources.</li>
+          <li>Ensured the design maintained accessibility, including clear font choices, contrast ratios, and mobile-first layout decisions.</li>
+          <li>Presented the full visual identity — logo, brand guide, and website — in a cohesive style that reflects the foundation’s theme of hope and inclusivity.</li>
+        </ul>
+      </section>
+      
+
+  <section class="image-slider">
+    <h2>Visual Identity</h2>
+    <div class="slider-container">
+      <div class="slide"><img src="../assets/logoforamal.png" alt="Al Aml Foundation Logo"></div>
+      <div class="slide"><img src="../assets/logovarforamal.png" alt="Al Aml Brand Guidelines"></div>
+      <div class="slide"><img src="../assets/alamalmockps.png" alt="Website Homepage Design"></div>
+      <div class="slide"><img src="../assets/amallogos.png" alt="Donation Page Preview"></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </section>
+
+  <section class="project-details container">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Custom brand design with consistent visual identity across all assets.</li>
+      <li>Informative homepage with clear calls to action for donations and volunteerism.</li>
+      <li>Responsive layout for smooth viewing across devices.</li>
+      <li>Accessible layout with good color contrast and readable fonts.</li>
+      <li>Simple, lightweight design for fast loading and usability.</li>
+    </ul>
+  </section>
+
+  <section class="project-details container">
+    <h2>Final Deliverables</h2>
+    <ul>
+      <li>Official logo files in multiple formats.</li>
+      <li>Complete brand guideline document (PDF).</li>
+      <li>Responsive front-end website with working donation page mockup.</li>
+      <li>All original design assets and HTML/CSS/JS source files.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Mad Design Agency. All Rights Reserved.</p>
+</footer>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(n) {
+    slides.forEach((slide) => {
+      slide.style.display = "none";
+      slide.style.opacity = "0";
+    });
+    slides[n].style.display = "block";
+    setTimeout(() => (slides[n].style.opacity = "1"), 100);
+  }
+
+  function moveSlide(n) {
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") moveSlide(-1);
+    if (e.key === "ArrowRight") moveSlide(1);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showSlide(slideIndex);
+  });
+</script>
+</body>
+</html>
